@@ -1,0 +1,40 @@
+<div class="contenedor">
+  <img class="img" height="400" [src]="imgAhorcado" />
+  <img
+    *ngIf="!started; else elseBlock"
+    class="imgStart"
+    (click)="Empezar()"
+    [src]="imgStart"
+  />
+  <ng-template #elseBlock>
+    <h4 class="h4">{{ palabra_activa }}</h4>
+    <div class="teclado">
+      <div class="letra" id="a" (click)="activarTecla('a')">A</div>
+      <div class="letra" id="b" (click)="activarTecla('b')">B</div>
+      <div class="letra" id="c" (click)="activarTecla('c')">C</div>
+      <div class="letra" id="d" (click)="activarTecla('d')">D</div>
+      <div class="letra" id="e" (click)="activarTecla('e')">E</div>
+      <div class="letra" id="f" (click)="activarTecla('f')">F</div>
+      <div class="letra" id="g" (click)="activarTecla('g')">G</div>
+      <div class="letra" id="h" (click)="activarTecla('h')">H</div>
+      <div class="letra" id="i" (click)="activarTecla('i')">I</div>
+      <div class="letra" id="j" (click)="activarTecla('j')">J</div>
+      <div class="letra" id="k" (click)="activarTecla('k')">K</div>
+      <div class="letra" id="l" (click)="activarTecla('l')">L</div>
+      <div class="letra" id="m" (click)="activarTecla('m')">M</div>
+      <div class="letra" id="n" (click)="activarTecla('n')">N</div>
+      <div class="letra" id="o" (click)="activarTecla('o')">O</div>
+      <div class="letra" id="p" (click)="activarTecla('p')">P</div>
+      <div class="letra" id="q" (click)="activarTecla('q')">Q</div>
+      <div class="letra" id="r" (click)="activarTecla('r')">R</div>
+      <div class="letra" id="s" (click)="activarTecla('s')">S</div>
+      <div class="letra" id="t" (click)="activarTecla('t')">T</div>
+      <div class="letra" id="u" (click)="activarTecla('u')">U</div>
+      <div class="letra" id="v" (click)="activarTecla('v')">V</div>
+      <div class="letra" id="w" (click)="activarTecla('w')">W</div>
+      <div class="letra" id="x" (click)="activarTecla('x')">X</div>
+      <div class="letra" id="y" (click)="activarTecla('y')">Y</div>
+      <div class="letra" id="z" (click)="activarTecla('z')">Z</div>
+    </div></ng-template
+  >
+</div>

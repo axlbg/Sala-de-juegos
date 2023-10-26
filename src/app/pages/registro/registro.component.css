@@ -1,0 +1,45 @@
+.page {
+  display: flex;
+  justify-content: center;
+  padding-top: 6em;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: start;
+  padding: 1em 3em;
+
+  border-radius: 15%;
+
+  background-color: rgb(47, 128, 110);
+  color: white;
+
+  border: solid 0.3em;
+  border-color: white;
+
+  padding-bottom: 3em;
+}
+
+.input {
+  min-height: 3em;
+  width: 100%;
+}
+
+.h3 {
+  font-size: larger;
+  font-size: 200%;
+}
+
+.button {
+  width: 100%;
+  min-height: 2.5em;
+  background-color: rgb(124, 255, 227);
+  background-color: white;
+  color: black;
+
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+}

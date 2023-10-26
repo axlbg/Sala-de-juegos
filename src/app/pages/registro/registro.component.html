@@ -1,0 +1,35 @@
+<div class="page">
+  <form class="form">
+    <h3 class="h3">Registrarse</h3>
+    <input
+      class="input"
+      type="user"
+      placeholder="Email"
+      [(ngModel)]="emailValue"
+      required
+      name="email"
+    />
+    <input
+      class="input"
+      type="password"
+      id="pass"
+      placeholder="Password"
+      [(ngModel)]="passValue"
+      required
+      name="pw"
+    />
+    <input
+      class="input"
+      type="password"
+      id="pass2"
+      placeholder="Repetir password"
+      [(ngModel)]="confirmPassword"
+      required
+      name="pw2"
+    />
+    <p></p>
+    <button class="button" type="submit" (click)="Registro($event)">
+      Registrarse
+    </button>
+  </form>
+</div>

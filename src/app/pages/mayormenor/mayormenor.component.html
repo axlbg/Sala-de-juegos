@@ -1,0 +1,36 @@
+<div class="body">
+  <div *ngIf="perdiste; else elseBlock" class="loss">
+    <div class="cartas">
+      <img class="img" [src]="cartaLinkAnterior" />
+      <img class="img" [src]="cartaLink" />
+    </div>
+    <h1 class="txt">Juego terminado</h1>
+    <h2 class="txt">Puntaje: {{ puntaje }}</h2>
+    <img class="imgStart" (click)="Empezar()" [src]="imgStart" />
+  </div>
+
+  <ng-template #elseBlock>
+    <div class="textoSuperior">
+      <div class="texto">
+        <h2 class="h2 txt">Carta anterior:</h2>
+        <img class="img" [src]="cartaLinkAnterior" />
+      </div>
+      <h2 class="h2 txt">Puntaje: {{ puntaje }}</h2>
+    </div>
+    <div class="cartas">
+      <img class="img" [src]="cartaLink" />
+      <img class="img" [src]="cartaDorso" />
+    </div>
+
+    <img
+      *ngIf="!started"
+      class="imgStart"
+      (click)="Empezar()"
+      [src]="imgStart"
+    />
+    <div *ngIf="started">
+      <button (click)="ClickMayorMenor(1)">Mayor</button>
+      <button (click)="ClickMayorMenor(0)">Menor</button>
+    </div>
+  </ng-template>
+</div>

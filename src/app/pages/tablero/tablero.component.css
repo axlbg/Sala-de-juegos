@@ -1,0 +1,48 @@
+.body {
+  height: 50em;
+  padding-top: 4em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.contenedor {
+  background-color: rgb(65, 47, 111);
+  height: 100%;
+  width: 80%;
+  padding: 2%;
+  background-image: url("https://img.freepik.com/fotos-premium/textura-fondo-salpicaduras-acuarela-purpura-abstracta-diseno_364465-1591.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border: solid 0.3em;
+  border-color: rgb(65, 47, 111);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1em;
+  padding-bottom: 2em;
+}
+
+.tablero {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 0.3em;
+  border-color: rgb(65, 47, 111);
+}
+
+.mensajeInfo {
+  border: solid 0.5em;
+  border-color: rgb(65, 47, 111);
+  background-color: honeydew;
+  height: 3em;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h2:hover {
+  cursor: default;
+}

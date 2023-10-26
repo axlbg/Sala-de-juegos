@@ -1,0 +1,58 @@
+.body {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 45em;
+  background-image: url("https://img.freepik.com/vector-premium/fondo-mesa-poker-color-verde_47243-1094.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.loss {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textoSuperior {
+  width: 60%;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.textoSuperior .texto {
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: start;
+  align-items: center;
+}
+.textoSuperior .img {
+  height: 15%;
+  width: 15%;
+}
+.textoSuperior .h2 {
+  color: rgb(228, 223, 240);
+}
+
+.cartas {
+  height: 80%;
+  display: flex;
+  flex-flow: nowrap;
+}
+
+.imgStart {
+  height: 4em;
+}
+.imgStart:hover {
+  height: 4.5em;
+  cursor: pointer;
+}
+
+.txt:hover {
+  cursor: default;
+}

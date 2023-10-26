@@ -1,0 +1,40 @@
+<section class="page">
+  <div class="container">
+    <div class="header">SALA DE CHAT</div>
+    <div id="chatbox" class="chatbox">
+      <p
+        *ngFor="let message of mensajes"
+        class="msj"
+        [ngClass]="
+          autentificador.userName == message.emisor
+            ? 'mensaje-enviado'
+            : 'mensaje-recibido'
+        "
+      >
+        <span
+          [ngClass]="
+            autentificador.userName == message.emisor ? 'email-1' : 'email-2'
+          "
+          >{{ message.emisor }}</span
+        >
+        <br />
+        {{ message.texto }} <br />
+        <span class="fecha">{{ message.hora }}</span>
+      </p>
+    </div>
+    <div class="footer">
+      <form class="form" ngSubmit="enviarMensaje()">
+        <input
+          type="text"
+          class="input"
+          placeholder="Enviar mensaje"
+          [(ngModel)]="nuevoMensaje"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <button class="button" type="submit" (click)="enviarMensaje()">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

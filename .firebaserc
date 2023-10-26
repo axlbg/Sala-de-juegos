@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sala-de-juego": {
+      "hosting": {
+        "tp": [
+          "sala-de-juego"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sala-de-juego"
+  }
+}
