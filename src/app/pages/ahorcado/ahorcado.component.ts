@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AutentificadorService } from 'src/app/services/autentificador.service';
+import { EstadisticasService } from 'src/app/services/estadisticas.service';
 import { MensajeInfoService } from 'src/app/services/mensaje-info.service';
 
 @Component({
@@ -11,7 +13,11 @@ export class AhorcadoComponent {
   palabra_activa: string = '';
 
   letras_usadas: Array<string>;
-  constructor(private _mensajeInfo: MensajeInfoService) {
+  constructor(
+    private _mensajeInfo: MensajeInfoService,
+    private estadisticas: EstadisticasService,
+    private auth: AutentificadorService
+  ) {
     this.letras_usadas = new Array();
   }
 
@@ -63,6 +69,14 @@ export class AhorcadoComponent {
       if (str == this.palabra_secreta) {
         mensajeDeInformacion =
           '¡GANASTE! La palabra era ' + this.palabra_secreta.toUpperCase();
+
+        this.estadisticas.guardarAhorcado(
+          this.auth.userName,
+          true,
+          this.palabra_secreta,
+          this.intentos
+        );
+
         this.started = false;
         this.imgAhorcado = this.imgWin;
       } else {
@@ -76,6 +90,14 @@ export class AhorcadoComponent {
 
       if (this.intentos >= this.imagenesAhorcado.length - 1) {
         mensajeDeInformacion = '¡Perdiste! No hay nadie peor que vos.';
+
+        this.estadisticas.guardarAhorcado(
+          this.auth.userName,
+          false,
+          this.palabra_secreta,
+          this.intentos
+        );
+
         this.started = false;
       } else {
         mensajeDeInformacion =

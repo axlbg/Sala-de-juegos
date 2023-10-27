@@ -21,6 +21,9 @@ import { MayormenorComponent } from './pages/mayormenor/mayormenor.component';
 import { PreguntadosComponent } from './pages/preguntados/preguntados.component';
 import { TatetiComponent } from './pages/tateti/tateti.component';
 import { TableroComponent } from './pages/tablero/tablero.component';
+import { EstadisticasComponent } from './pages/estadisticas/estadisticas.component';
+import { TablaAhorcadoComponent } from './pages/tablas/tabla-ahorcado/tabla-ahorcado.component';
+import { TablaMayormenorComponent } from './pages/tablas/tabla-mayormenor/tabla-mayormenor.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { TableroComponent } from './pages/tablero/tablero.component';
     PreguntadosComponent,
     TatetiComponent,
     TableroComponent,
+    EstadisticasComponent,
+    TablaAhorcadoComponent,
+    TablaMayormenorComponent,
   ],
   imports: [
     BrowserModule,

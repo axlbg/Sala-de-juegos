@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MensajeInfoService } from 'src/app/services/mensaje-info.service';
+import { EstadisticasService } from 'src/app/services/estadisticas.service';
+import { AutentificadorService } from 'src/app/services/autentificador.service';
 
 @Component({
   selector: 'app-mayormenor',
@@ -7,7 +9,11 @@ import { MensajeInfoService } from 'src/app/services/mensaje-info.service';
   styleUrls: ['./mayormenor.component.css'],
 })
 export class MayormenorComponent {
-  constructor(private _mensajeInfo: MensajeInfoService) {}
+  constructor(
+    private _mensajeInfo: MensajeInfoService,
+    private estadisticas: EstadisticasService,
+    private auth: AutentificadorService
+  ) {}
   cartaNueva = '';
   cartaAnterior = '';
   mazoActual = [''];
@@ -112,6 +118,7 @@ export class MayormenorComponent {
       this.puntaje++;
     } else {
       this.mensajeDeInformacion += ' - TERMINA EL JUEGO - START para empezar';
+      this.estadisticas.guardarMayormenor(this.auth.userName, this.puntaje);
       this.perdiste = true;
     }
     this._mensajeInfo.emitChange(this.mensajeDeInformacion);

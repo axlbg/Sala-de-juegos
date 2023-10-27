@@ -1,0 +1,29 @@
+<section class="body">
+  <div class="primerTabla">
+    <table class="table">
+      <tr>
+        <th>Juegos</th>
+        <th>Cantidad de juegos</th>
+        <th>Mayor puntuación</th>
+      </tr>
+      <tr routerLink="./ahorcado">
+        <td>Ahorcado</td>
+        <td>{{ ahorcado.cantidadDeJuegos }}</td>
+        <td>-</td>
+      </tr>
+      <tr routerLink="./mayormenor">
+        <td>Mayor o menor</td>
+        <td>{{ mayorMenor.cantidadDeJuegos }}</td>
+        <td>{{ mayorMenor.mayorPuntaje }}</td>
+      </tr>
+      <tr>
+        <td>Preguntados</td>
+        <td>{{ preguntados.cantidadDeJuegos }}</td>
+        <td>{{ preguntados.mayorPuntaje }}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="otraTabla">
+    <router-outlet></router-outlet>
+  </div>
+</section>

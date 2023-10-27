@@ -16,10 +16,12 @@
       <li class="menu-item" routerLink="/registro">Registro</li>
     </ng-template>
     <ng-template #elseBlock>
-      <li class="menu-item" routerLink="./home">Home</li>
+      <li class="menu-item" routerLink="/home">Home</li>
       <li class="menu-item" routerLink="/quiensoy">Quien soy</li>
       <li class="menu-item" routerLink="/chat">Chat</li>
-      <li class="menu-item">{{ autentificador.userName }}</li>
+      <li class="menu-item" routerLink="/estadisticas">
+        {{ autentificador.userName }}
+      </li>
       <li class="menu-item" (click)="deslogear($event)">Log Out</li>
     </ng-template>
   </ul>

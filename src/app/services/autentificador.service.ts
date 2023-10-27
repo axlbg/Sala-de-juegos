@@ -16,19 +16,6 @@ export class AutentificadorService {
     private notificar: NotificacionService
   ) {}
 
-  /* async logear(email: string, password: string) {
-    try {
-      const inicio = await this.firebase.userLogin(email, password);
-      if (inicio) {
-        this.estaLogeado = true;
-        this.userName = email;
-      }
-      return inicio;
-    } catch (error) {
-      return null;
-    }
-  }*/
-
   async logear(email: string, password: string) {
     try {
       const inicio = await this.firebaseAuth.signInWithEmailAndPassword(
@@ -53,25 +40,16 @@ export class AutentificadorService {
     this.firebaseAuth.signOut();
   }
 
-  /* registrarUsuario(email: string, password: string) {
-    this.firebase.signup(email, password);
-    this.estaLogeado = true;
-    this.userName = email;
-  }*/
-
   async registrarUsuario(email: string, password: string) {
     await this.firebaseAuth
       .createUserWithEmailAndPassword(email, password)
       .then((res) => {
-        //localStorage.setItem('user',JSON.stringify(res.user));
         this.estaLogeado = true;
         this.userName = email;
         this.ruteador.navigate(['/']);
         this.notificar.exito('Registrado correctamente.');
       })
       .catch((error) => {
-        //this.notifyService.showError(this.createMessage(error.code), 'Error');
-        //console.log(this.createMessage(error.code));
         this.notificar.error(this.createMessage(error.code));
         return null;
       });

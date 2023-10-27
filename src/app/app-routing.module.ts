@@ -11,6 +11,9 @@ import { MayormenorComponent } from './pages/mayormenor/mayormenor.component';
 import { PreguntadosComponent } from './pages/preguntados/preguntados.component';
 import { TatetiComponent } from './pages/tateti/tateti.component';
 import { TableroComponent } from './pages/tablero/tablero.component';
+import { EstadisticasComponent } from './pages/estadisticas/estadisticas.component';
+import { TablaAhorcadoComponent } from './pages/tablas/tabla-ahorcado/tabla-ahorcado.component';
+import { TablaMayormenorComponent } from './pages/tablas/tabla-mayormenor/tabla-mayormenor.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent /*canActivate: [perfilesGuard]*/ },
@@ -21,6 +24,15 @@ const routes: Routes = [
     path: 'chat',
     component: ChatComponent,
     canActivate: [perfilesGuard],
+  },
+  {
+    path: 'estadisticas',
+    component: EstadisticasComponent,
+    canActivate: [perfilesGuard],
+    children: [
+      { path: 'ahorcado', component: TablaAhorcadoComponent },
+      { path: 'mayormenor', component: TablaMayormenorComponent },
+    ],
   },
   { path: 'registro', component: RegistroComponent },
   {

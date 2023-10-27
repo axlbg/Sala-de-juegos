@@ -1,0 +1,11 @@
+<div class="titulo"><b>MAYOR O MENOR</b></div>
+<table class="table">
+  <tr>
+    <th>Hora y fecha</th>
+    <th>Puntaje</th>
+  </tr>
+  <tr *ngFor="let game of games">
+    <td>{{ game.hora }}</td>
+    <td>{{ game.puntaje }}</td>
+  </tr>
+</table>
