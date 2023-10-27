@@ -13,7 +13,8 @@ import { TatetiComponent } from './pages/tateti/tateti.component';
 import { TableroComponent } from './pages/tablero/tablero.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [perfilesGuard] },
+  { path: '', component: HomeComponent /*canActivate: [perfilesGuard]*/ },
+  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'quiensoy', component: QuiensoyComponent },
   {

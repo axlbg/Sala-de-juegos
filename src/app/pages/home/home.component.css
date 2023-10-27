@@ -1,3 +1,28 @@
+.banner {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 4em;
+}
+
+.contenido-del-banner {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/014/563/259/original/futuristic-red-and-blue-abstract-gaming-banner-design-template-with-metal-technology-concept-vector.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 20em;
+  width: 98%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

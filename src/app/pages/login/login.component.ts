@@ -20,7 +20,7 @@ export class LoginComponent {
   passvalue = '';
 
   AccesoRapido() {
-    this.emailvalue = 'asd@mail.com';
+    this.emailvalue = 'default@example.com';
     this.passvalue = '123123';
   }
 

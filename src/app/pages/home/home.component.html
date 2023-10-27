@@ -1,14 +1,22 @@
-<div class="grid">
-  <article class="article ahorcado" routerLink="/juegos/ahorcado">
-    <h1 class="h1">Ahorcado</h1>
-  </article>
-  <article class="article mayormenor" routerLink="/juegos/mayormenor">
-    <h1 class="h1">Mayor o menor</h1>
-  </article>
-  <article class="article" routerLink="/juegos/preguntados">
-    <h1 class="h1">Preguntados</h1>
-  </article>
-  <article class="article" routerLink="/juegos/tateti">
-    <h1 class="h1">Ta Te Ti</h1>
-  </article>
+<div class="banner">
+  <div class="contenido-del-banner">
+    <h1 class="h1">Sala de juegos</h1>
+  </div>
+</div>
+
+<div *ngIf="estaLogeado">
+  <div class="grid">
+    <article class="article ahorcado" routerLink="/juegos/ahorcado">
+      <h1 class="h1">Ahorcado</h1>
+    </article>
+    <article class="article mayormenor" routerLink="/juegos/mayormenor">
+      <h1 class="h1">Mayor o menor</h1>
+    </article>
+    <article class="article" routerLink="/juegos/preguntados">
+      <h1 class="h1">Preguntados</h1>
+    </article>
+    <article class="article" routerLink="/juegos/tateti">
+      <h1 class="h1">Ta Te Ti</h1>
+    </article>
+  </div>
 </div>
