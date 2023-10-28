@@ -3,11 +3,11 @@ import { AutentificadorService } from 'src/app/services/autentificador.service';
 import { EstadisticasService } from 'src/app/services/estadisticas.service';
 
 @Component({
-  selector: 'app-tabla-ahorcado',
-  templateUrl: './tabla-ahorcado.component.html',
-  styleUrls: ['./tabla-ahorcado.component.css', '../tablas.css'],
+  selector: 'app-tabla-preguntados',
+  templateUrl: './tabla-preguntados.component.html',
+  styleUrls: ['./tabla-preguntados.component.css', '../tablas.css'],
 })
-export class TablaAhorcadoComponent {
+export class TablaPreguntadosComponent {
   games: any = [];
 
   constructor(
@@ -15,7 +15,7 @@ export class TablaAhorcadoComponent {
     private estadisticas: EstadisticasService
   ) {
     this.estadisticas
-      .traerAhorcado(this.autentificador.userName)
+      .traerPreguntados(this.autentificador.userName)
       .subscribe((games) => {
         if (games !== null) {
           this.games = games;

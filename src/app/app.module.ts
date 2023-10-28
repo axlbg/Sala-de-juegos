@@ -24,6 +24,7 @@ import { TableroComponent } from './pages/tablero/tablero.component';
 import { EstadisticasComponent } from './pages/estadisticas/estadisticas.component';
 import { TablaAhorcadoComponent } from './pages/tablas/tabla-ahorcado/tabla-ahorcado.component';
 import { TablaMayormenorComponent } from './pages/tablas/tabla-mayormenor/tabla-mayormenor.component';
+import { TablaPreguntadosComponent } from './pages/tablas/tabla-preguntados/tabla-preguntados.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { TablaMayormenorComponent } from './pages/tablas/tabla-mayormenor/tabla-
     EstadisticasComponent,
     TablaAhorcadoComponent,
     TablaMayormenorComponent,
+    TablaPreguntadosComponent,
   ],
   imports: [
     BrowserModule,

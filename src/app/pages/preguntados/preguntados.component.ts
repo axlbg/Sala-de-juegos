@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ApiPaisesService } from 'src/app/services/api-paises.service';
+import { AutentificadorService } from 'src/app/services/autentificador.service';
 import { MensajeInfoService } from 'src/app/services/mensaje-info.service';
+import { EstadisticasService } from 'src/app/services/estadisticas.service';
 
 @Component({
   selector: 'app-preguntados',
@@ -25,7 +27,9 @@ export class PreguntadosComponent {
 
   constructor(
     private apiPaises: ApiPaisesService,
-    private mensajeInfo: MensajeInfoService
+    private mensajeInfo: MensajeInfoService,
+    private auth: AutentificadorService,
+    private estadisticas: EstadisticasService
   ) {
     this.apiPaises.getPaises();
   }
@@ -119,6 +123,11 @@ export class PreguntadosComponent {
               '¡PERDISTE! No hay nadie peor que vos.'
             );
           }
+          this.estadisticas.guardarPreguntados(
+            this.auth.userName,
+            this.victory,
+            this.score
+          );
         }
       }
     }

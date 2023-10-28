@@ -14,6 +14,7 @@ import { TableroComponent } from './pages/tablero/tablero.component';
 import { EstadisticasComponent } from './pages/estadisticas/estadisticas.component';
 import { TablaAhorcadoComponent } from './pages/tablas/tabla-ahorcado/tabla-ahorcado.component';
 import { TablaMayormenorComponent } from './pages/tablas/tabla-mayormenor/tabla-mayormenor.component';
+import { TablaPreguntadosComponent } from './pages/tablas/tabla-preguntados/tabla-preguntados.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent /*canActivate: [perfilesGuard]*/ },
@@ -32,6 +33,7 @@ const routes: Routes = [
     children: [
       { path: 'ahorcado', component: TablaAhorcadoComponent },
       { path: 'mayormenor', component: TablaMayormenorComponent },
+      { path: 'preguntados', component: TablaPreguntadosComponent },
     ],
   },
   { path: 'registro', component: RegistroComponent },

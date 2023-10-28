@@ -31,5 +31,19 @@ export class EstadisticasComponent {
         });
       }
     });
+
+    this.estadisticas
+      .traerPreguntados(this.auth.userName)
+      .subscribe((games) => {
+        if (games !== null) {
+          this.preguntados.cantidadDeJuegos = games.length;
+
+          games.forEach((element: any) => {
+            if (element.puntaje > this.preguntados.mayorPuntaje) {
+              this.preguntados.mayorPuntaje = element.puntaje;
+            }
+          });
+        }
+      });
   }
 }

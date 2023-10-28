@@ -5,7 +5,7 @@ import { EstadisticasService } from 'src/app/services/estadisticas.service';
 @Component({
   selector: 'app-tabla-mayormenor',
   templateUrl: './tabla-mayormenor.component.html',
-  styleUrls: ['./tabla-mayormenor.component.css'],
+  styleUrls: ['./tabla-mayormenor.component.css', '../tablas.css'],
 })
 export class TablaMayormenorComponent {
   games: any = [];

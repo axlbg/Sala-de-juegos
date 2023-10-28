@@ -44,6 +44,19 @@ export class EstadisticasService {
     this.firestore.collection('resultados').add(obj);
   }
 
+  guardarPreguntados(usuario: any, ganador: boolean, puntaje: number) {
+    let hora = this.obtenerHora();
+    let juego = 'preguntados';
+    let obj = {
+      usuario: usuario,
+      juego: juego,
+      hora: hora,
+      ganador: ganador,
+      puntaje: puntaje,
+    };
+    this.firestore.collection('resultados').add(obj);
+  }
+
   traerAhorcado(usuario: any) {
     const collection = this.firestore.collection('resultados', (ref) =>
       ref.where('usuario', '==', usuario).where('juego', '==', 'ahorcado')
@@ -54,6 +67,13 @@ export class EstadisticasService {
   traerMayormenor(usuario: any) {
     const collection = this.firestore.collection('resultados', (ref) =>
       ref.where('usuario', '==', usuario).where('juego', '==', 'mayormenor')
+    );
+    return collection.valueChanges();
+  }
+
+  traerPreguntados(usuario: any) {
+    const collection = this.firestore.collection('resultados', (ref) =>
+      ref.where('usuario', '==', usuario).where('juego', '==', 'preguntados')
     );
     return collection.valueChanges();
   }

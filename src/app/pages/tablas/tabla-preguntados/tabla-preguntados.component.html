@@ -1,0 +1,17 @@
+<div class="titulo"><b>PREGUNTADOS</b></div>
+<table class="table">
+  <tr>
+    <th>Hora y fecha</th>
+    <th>Resultado</th>
+    <th>Puntuaje</th>
+  </tr>
+
+  <tr *ngFor="let game of games">
+    <td>{{ game.hora }}</td>
+    <td *ngIf="game.ganador">Ganador</td>
+    <td *ngIf="!game.ganador">Perdedor</td>
+    <td>{{ game.puntaje }}</td>
+  </tr>
+
+  <tr></tr>
+</table>
