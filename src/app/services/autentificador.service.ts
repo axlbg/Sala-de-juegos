@@ -36,7 +36,7 @@ export class AutentificadorService {
   deslogear() {
     this.estaLogeado = false;
     console.log('deslogeado');
-    //this.firebase.logout();
+
     this.firebaseAuth.signOut();
   }
 
